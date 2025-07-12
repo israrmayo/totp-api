@@ -1,7 +1,8 @@
-const express = require("express");
+import express from "express";
+import speakeasy from "speakeasy";
+
 const app = express();
 const PORT = process.env.PORT || 3000;
-const speakeasy = require("speakeasy");
 
 app.get("/totp", (req, res) => {
   const key = req.query.key;
